@@ -1,2 +1,5 @@
 # Mock
 my-json-server.typicode.com mock测试
+
+##使用方法参见:##
+https://my-json-server.typicode.com/
