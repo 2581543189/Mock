@@ -76,5 +76,77 @@
     "apiRegister": {
         "status": "ok", 
         "currentAuthority": "user"
+    }, 
+    "mysqlToHive": {
+        "job": {
+            "setting": {
+                "speed": {
+                    "channel": 3
+                }, 
+                "errorLimit": {
+                    "record": 0, 
+                    "percentage": 0.02
+                }
+            }, 
+            "content": [
+                {
+                    "reader": {
+                        "name": "mysqlreader", 
+                        "parameter": {
+                            "writeMode": "insert", 
+                            "username": "root", 
+                            "password": "123456", 
+                            "column": [
+                                "eid", 
+                                "name", 
+                                "salary", 
+                                "destination"
+                            ], 
+                            "splitPk": "eid", 
+                            "connection": [
+                                {
+                                    "table": [
+                                        "employee"
+                                    ], 
+                                    "jdbcUrl": [
+                                        "jdbc:mysql://master:3306/test"
+                                    ]
+                                }
+                            ]
+                        }
+                    }, 
+                    "writer": {
+                        "name": "hdfswriter", 
+                        "parameter": {
+                            "defaultFS": "hdfs://master:9000", 
+                            "fileType": "text", 
+                            "path": "/user/hive/warehouse/employee", 
+                            "fileName": "mysql_table", 
+                            "column": [
+                                {
+                                    "name": "eid", 
+                                    "type": "int"
+                                }, 
+                                {
+                                    "name": "name", 
+                                    "type": "string"
+                                }, 
+                                {
+                                    "name": "salary", 
+                                    "type": "string"
+                                }, 
+                                {
+                                    "name": "destination", 
+                                    "type": "string"
+                                }
+                            ], 
+                            "writeMode": "append", 
+                            "fieldDelimiter": "	", 
+                            "compress": "gzip"
+                        }
+                    }
+                }
+            ]
+        }
     }
 }
