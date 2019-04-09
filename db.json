@@ -126,11 +126,11 @@
                             "column":[
                                 {
                                     "name":"user_id",
-                                    "type":"long"
+                                    "type":"bigint"
                                 },
                                 {
                                     "name":"author_id",
-                                    "type":"long"
+                                    "type":"bigint"
                                 },
                                 {
                                     "name":"probability",
@@ -138,7 +138,7 @@
                                 },
                                 {
                                     "name":"prediction",
-                                    "type":"long"
+                                    "type":"int"
                                 }
                             ],
                             "writeMode":"append",
