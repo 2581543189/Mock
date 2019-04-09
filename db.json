@@ -92,8 +92,8 @@
                 {
                     "reader":{
                         "name":"ks-dp-hdfsreader",
-                        "fileType":"parquet",
                         "parameter":{
+                            "fileType":"parquet",
                             "defaultFS":"hdfs://master:9000",
                             "path":"/home/ds/dw/default.db/ds_liuzhiyuan_user_comnt_predict_score_di/p_date=20190407",
                             "column":[
