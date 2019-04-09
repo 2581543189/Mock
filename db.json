@@ -111,7 +111,7 @@
                                 },
                                 {
                                     "name":"prediction",
-                                    "type":"long"
+                                    "type":"integer"
                                 }
                             ]
                         }
