@@ -112,8 +112,13 @@
                                 {
                                     "name":"prediction",
                                     "type":"integer"
+                                },{
+                                    "name":"p_date",
+                                    "type":"string"
                                 }
-                            ]
+                            ],
+                            "partitionColumn":"p_date",
+                            "partitionColumnValue":"20190407"
                         }
                     },
                     "writer":{
@@ -139,6 +144,9 @@
                                 {
                                     "name":"prediction",
                                     "type":"int"
+                                },{
+                                    "name":"p_date",
+                                    "type":"string"
                                 }
                             ],
                             "writeMode":"append",
