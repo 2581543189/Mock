@@ -77,12 +77,23 @@
         "status":"ok",
         "currentAuthority":"user"
     },
-    "mysqlToHive":{
+    "test1":{
         "code":0,
         "message":"",
         "data":{
             "airflow_test":{
                 "test_hive_1":2
+            }
+        }
+    },
+    "test2":{
+        "code":0,
+        "message":"",
+        "data":{
+            "airflow_test":{
+                "test_hive_1":2
+            },
+            "airflow_test2": {
             }
         }
     }
